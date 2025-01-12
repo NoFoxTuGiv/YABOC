@@ -9,4 +9,4 @@ func _ready():
 	_on_value_changed(self.value)
 
 func _on_value_changed(value):
-	vol_label.text = str(value)+"%"
+	vol_label.text = str(int(value * 100))+"%"

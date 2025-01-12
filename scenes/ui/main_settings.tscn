@@ -68,6 +68,11 @@ text = "Volume"
 
 [node name="vol_slider" type="HSlider" parent="MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+tick_count = 5
+ticks_on_borders = true
 script = ExtResource("1_ohpva")
 
 [node name="vol_label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/vol_slider"]
@@ -96,15 +101,13 @@ layout_mode = 2
 
 [node name="ResolutionDD" type="OptionButton" parent="MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+selected = 2
 item_count = 3
 popup/item_0/text = "1920 x 1080"
-popup/item_0/separator = true
 popup/item_1/text = "1280 x 720"
 popup/item_1/id = 1
-popup/item_1/separator = true
 popup/item_2/text = "640 x 360"
 popup/item_2/id = 2
-popup/item_2/separator = true
 
 [node name="Separator5" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -115,6 +118,7 @@ text = "Back"
 
 [connection signal="value_changed" from="MarginContainer/MarginContainer/VBoxContainer/vol_slider" to="." method="_on_vol_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer/MarginContainer/VBoxContainer/vol_slider" to="MarginContainer/MarginContainer/VBoxContainer/vol_slider/vol_label" method="_on_slider_changed"]
+[connection signal="toggled" from="MarginContainer/MarginContainer/VBoxContainer/MuteToggle" to="." method="_on_mute_toggled"]
 [connection signal="toggled" from="MarginContainer/MarginContainer/VBoxContainer/FSToggle" to="." method="_on_fs_toggled"]
 [connection signal="item_selected" from="MarginContainer/MarginContainer/VBoxContainer/ResolutionDD" to="." method="_on_resolution_selected"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/BackBtn" to="." method="_on_back_btn_pressed"]
