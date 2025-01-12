@@ -10,6 +10,8 @@ func _ready() -> void:
 		print("No music tracks assigned!")
 		return
 	
+	self.finished.connect(_on_finished)
+	
 	# Start the playlist
 	play_next_song()
 
