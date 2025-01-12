@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://dl5ambl24bu1m"]
+
+[ext_resource type="PackedScene" uid="uid://d0a7msm5avogo" path="res://scenes/entities/player.tscn" id="1_l4wp4"]
+[ext_resource type="PackedScene" uid="uid://cfbd6na46865c" path="res://scenes/entities/ball.tscn" id="2_mv8gb"]
+[ext_resource type="PackedScene" uid="uid://woue3p5i67pa" path="res://scenes/ui/pause_menu.tscn" id="3_up38g"]
+[ext_resource type="Script" path="res://scripts/brick_wall.gd" id="4_b38dx"]
+[ext_resource type="PackedScene" uid="uid://c2kfluuc6ne31" path="res://scenes/entities/brick.tscn" id="5_nmfcb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2bocg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_flogk"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_khnda"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_q1cfp"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 1)
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="NorthWall" type="StaticBody2D" parent="Walls"]
+unique_name_in_owner = true
+position = Vector2(320, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/NorthWall"]
+rotation = -3.14159
+shape = SubResource("WorldBoundaryShape2D_2bocg")
+
+[node name="EastWall" type="StaticBody2D" parent="Walls"]
+unique_name_in_owner = true
+position = Vector2(640, 192)
+rotation = -1.57079
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/EastWall"]
+shape = SubResource("WorldBoundaryShape2D_flogk")
+
+[node name="SouthWall" type="StaticBody2D" parent="Walls"]
+unique_name_in_owner = true
+position = Vector2(320, 360)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls/SouthWall"]
+shape = SubResource("WorldBoundaryShape2D_khnda")
+
+[node name="WestWall" type="StaticBody2D" parent="Walls"]
+unique_name_in_owner = true
+position = Vector2(0, 192)
+rotation = 1.57079
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls/WestWall"]
+shape = SubResource("WorldBoundaryShape2D_q1cfp")
+
+[node name="Player" parent="." instance=ExtResource("1_l4wp4")]
+unique_name_in_owner = true
+position = Vector2(320, 330)
+
+[node name="Ball" parent="." instance=ExtResource("2_mv8gb")]
+unique_name_in_owner = true
+position = Vector2(320, 319)
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_up38g")]
+process_mode = 3
+visible = false
+offset_left = 320.0
+offset_top = 192.0
+offset_right = 320.0
+offset_bottom = 192.0
+
+[node name="BrickWall" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(576, 224)
+rotation = -3.14159
+script = ExtResource("4_b38dx")
+brick_scene = ExtResource("5_nmfcb")

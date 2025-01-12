@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bk1x0wji7mnfa"]
+
+[ext_resource type="Shader" path="res://resources/pause_menu.gdshader" id="1_277y3"]
+
+[resource]
+shader = ExtResource("1_277y3")
+shader_parameter/lod = 0.0

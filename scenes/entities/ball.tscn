@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfbd6na46865c"]
+
+[ext_resource type="Texture2D" uid="uid://dqfkuq5jkqohp" path="res://assets/sprites/paddles_and_balls.png" id="1_jdnfg"]
+[ext_resource type="Script" path="res://scripts/ball.gd" id="1_wrh4p"]
+[ext_resource type="AudioStream" uid="uid://wowym1bqvbe4" path="res://assets/sound/blip.mp3" id="3_m256a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k5gwr"]
+radius = 3.0
+
+[node name="Ball" type="CharacterBody2D"]
+position = Vector2(329, 185)
+script = ExtResource("1_wrh4p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k5gwr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jdnfg")
+region_enabled = true
+region_rect = Rect2(144, 8, 8, 8)
+
+[node name="Blip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_m256a")

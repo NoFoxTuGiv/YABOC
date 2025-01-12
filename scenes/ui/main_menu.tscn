@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw8l6mijmonto"]
+
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_ussg7"]
+[ext_resource type="Texture2D" uid="uid://eukammmgcgny" path="res://assets/ui/title.png" id="2_aqp5v"]
+[ext_resource type="Theme" uid="uid://7sornyntgcl2" path="res://resources/base_theme.tres" id="2_hnw3s"]
+[ext_resource type="AudioStream" uid="uid://clw8koa1y5e1k" path="res://assets/sound/TitleMusic.mp3" id="2_ytnsn"]
+[ext_resource type="PackedScene" uid="uid://cf13si6ljkp4u" path="res://scenes/ui/main_settings.tscn" id="4_rjecm"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ussg7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -5
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_aqp5v")
+
+[node name="MainContainer" type="MarginContainer" parent="."]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 250
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 80
+
+[node name="MMContainer" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="YABOC!" type="Label" parent="MainContainer/MMContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.54902)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 64
+text = "YABOC!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="yaboc" type="Label" parent="MainContainer/MMContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.54902)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Yet Another
+Breakout Clone"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separator" type="Control" parent="MainContainer/MMContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="MainContainer/MMContainer"]
+layout_mode = 2
+theme = ExtResource("2_hnw3s")
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="MainContainer/MMContainer"]
+layout_mode = 2
+theme = ExtResource("2_hnw3s")
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MainContainer/MMContainer"]
+layout_mode = 2
+theme = ExtResource("2_hnw3s")
+text = "Quit"
+
+[node name="MainSettings" parent="MainContainer" instance=ExtResource("4_rjecm")]
+process_mode = 3
+visible = false
+layout_mode = 2
+
+[node name="TitleMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ytnsn")
+volume_db = -12.0
+
+[connection signal="pressed" from="MainContainer/MMContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainContainer/MMContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainContainer/MMContainer/Quit" to="." method="_on_quit_pressed"]
