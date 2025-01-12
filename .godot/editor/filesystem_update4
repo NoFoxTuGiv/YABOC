@@ -5,5 +5,8 @@ res://scenes/entities/ball.tscn
 res://scenes/ui/main_settings.tscn
 res://scenes/entities/brick.tscn
 res://scenes/ui/health_bar.tscn
+res://scripts/util/global.gd
+res://scripts/ball.gd
 res://scripts/util/game_controller.gd
-res://scripts/util/audio_stream_player_2d.gd
+res://scripts/player.gd
+res://scripts/ui/health_bar.gd

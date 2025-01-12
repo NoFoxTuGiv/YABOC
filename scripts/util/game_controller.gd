@@ -12,6 +12,6 @@ func _on_brick_destroyed():
 	print("Brick destroyed!")
 	Global.increment_score(10)
 
-func _restart_game():
-	# Logic to restart the game
-	get_tree().reload_current_scene()
+func _game_over():
+	# For now, return to the main menu, eventually handle GO graciously
+	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")

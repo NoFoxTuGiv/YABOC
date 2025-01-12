@@ -1,3 +1,49 @@
-[gd_scene format=3 uid="uid://tn3af01fpcey"]
+[gd_scene load_steps=3 format=3 uid="uid://tn3af01fpcey"]
 
-[node name="HealthBar" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://d34vwdyaqdjug" path="res://assets/sprites/Hearts.png" id="1_0qs6f"]
+[ext_resource type="Script" path="res://scripts/ui/health_bar.gd" id="1_lwnbs"]
+
+[node name="HealthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lwnbs")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Heart0" type="Sprite2D" parent="HBoxContainer"]
+texture = ExtResource("1_0qs6f")
+hframes = 8
+frame = 7
+
+[node name="Heart1" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(16, 0)
+texture = ExtResource("1_0qs6f")
+hframes = 8
+frame = 7
+
+[node name="Heart2" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(32, 0)
+texture = ExtResource("1_0qs6f")
+hframes = 8
+frame = 7
+
+[node name="Heart3" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(48, 0)
+texture = ExtResource("1_0qs6f")
+hframes = 8
+frame = 7
+
+[node name="Heart4" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(64, 0)
+texture = ExtResource("1_0qs6f")
+hframes = 8
+frame = 7
+
+[node name="Heart5" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(80, 0)
+texture = ExtResource("1_0qs6f")
+hframes = 8
+frame = 7

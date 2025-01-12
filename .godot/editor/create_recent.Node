@@ -1,5 +1,8 @@
-AudioStreamPlayer2D
+ColorRect
 Sprite2D
+HBoxContainer
+Control
+AudioStreamPlayer2D
 AnimatedSprite2D
 Label
 Node
@@ -7,9 +10,5 @@ CollisionShape2D
 Node2D
 StaticBody2D
 MarginContainer
-ColorRect
 CheckButton
 OptionButton
-Button
-HSlider
-VBoxContainer
