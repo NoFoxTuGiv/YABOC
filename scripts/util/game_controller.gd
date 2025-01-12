@@ -9,7 +9,8 @@ func _ready():
 		return
 
 func _on_brick_destroyed():
-	print("Brick destroyed!")
+	if not bricks == null:
+		get_tree().reload_current_scene()
 	Global.increment_score(10)
 
 func _game_over():

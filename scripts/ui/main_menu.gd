@@ -9,10 +9,9 @@ func _ready() -> void:
 	start.grab_focus()
 	$MainContainer/MainSettings.hide()
 
-func _process(delta: float) -> void:
-	pass
-
 func _on_start_pressed() -> void:
+	Global.score = 0
+	Global.rounds = 0
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _on_settings_pressed() -> void:

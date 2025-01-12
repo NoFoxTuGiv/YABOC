@@ -17,9 +17,9 @@ var frame_ranges = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_build_wall()
+	build_wall()
 
-func _build_wall():
+func build_wall():
 	#Clear any existing tiles, just in case.
 	for child in get_children():
 		child.queue_free()

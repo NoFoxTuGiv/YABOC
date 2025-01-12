@@ -1,10 +1,10 @@
+Label
 ColorRect
 Sprite2D
 HBoxContainer
 Control
 AudioStreamPlayer2D
 AnimatedSprite2D
-Label
 Node
 CollisionShape2D
 Node2D
