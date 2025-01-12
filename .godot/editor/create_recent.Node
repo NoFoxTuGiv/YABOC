@@ -1,5 +1,7 @@
-Label
+AudioStreamPlayer2D
 Sprite2D
+AnimatedSprite2D
+Label
 Node
 CollisionShape2D
 Node2D
@@ -11,4 +13,3 @@ OptionButton
 Button
 HSlider
 VBoxContainer
-Control

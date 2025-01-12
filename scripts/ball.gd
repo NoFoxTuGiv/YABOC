@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 @export var initial_speed: float = 200.0  # Starting speed of the ball
-@export var blip_sound: AudioStreamPlayer  # Reference to the bounce sound
 
 func _ready():
 	# Randomize initial direction
@@ -19,8 +18,7 @@ func handle_collision(collision: KinematicCollision2D) -> void:
 	velocity = velocity.bounce(collision.get_normal()).normalized() * initial_speed
 
 	# Play a bounce sound
-	if blip_sound:
-		blip_sound.play()
+	$Blip.play()
 
 	# Get the collider
 	var collider = collision.get_collider()

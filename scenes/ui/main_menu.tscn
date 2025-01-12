@@ -95,6 +95,7 @@ layout_mode = 2
 [node name="TitleMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ytnsn")
 volume_db = -12.0
+autoplay = true
 
 [connection signal="pressed" from="MainContainer/MMContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainContainer/MMContainer/Settings" to="." method="_on_settings_pressed"]

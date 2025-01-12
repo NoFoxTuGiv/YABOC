@@ -17,3 +17,4 @@ res://scripts/ui/pause_menu.gd
 res://README.md
 res://scripts/ui/score.gd
 res://scenes/ui/health_bar.tscn
+res://scripts/util/audio_stream_player_2d.gd

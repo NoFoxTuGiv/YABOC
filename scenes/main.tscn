@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dl5ambl24bu1m"]
+[gd_scene load_steps=12 format=3 uid="uid://dl5ambl24bu1m"]
 
 [ext_resource type="PackedScene" uid="uid://d0a7msm5avogo" path="res://scenes/entities/player.tscn" id="1_l4wp4"]
 [ext_resource type="PackedScene" uid="uid://cfbd6na46865c" path="res://scenes/entities/ball.tscn" id="2_mv8gb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/brick_wall.gd" id="4_b38dx"]
 [ext_resource type="PackedScene" uid="uid://c2kfluuc6ne31" path="res://scenes/entities/brick.tscn" id="5_nmfcb"]
 [ext_resource type="Script" path="res://scripts/ui/score.gd" id="6_bhtad"]
+[ext_resource type="Script" path="res://scripts/util/audio_stream_player_2d.gd" id="7_kmu32"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2bocg"]
 
@@ -85,3 +86,6 @@ offset_top = 16.0
 offset_right = 104.0
 offset_bottom = 29.0
 script = ExtResource("6_bhtad")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource("7_kmu32")
