@@ -15,3 +15,5 @@ res://scripts/ui/main_menu.gd
 res://scripts/ui/main_settings.gd
 res://scripts/ui/pause_menu.gd
 res://README.md
+res://scripts/ui/score.gd
+res://scenes/ui/health_bar.tscn

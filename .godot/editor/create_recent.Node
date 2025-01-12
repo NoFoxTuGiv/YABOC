@@ -1,3 +1,4 @@
+Label
 Sprite2D
 Node
 CollisionShape2D
@@ -8,7 +9,6 @@ ColorRect
 CheckButton
 OptionButton
 Button
-Label
 HSlider
 VBoxContainer
 Control

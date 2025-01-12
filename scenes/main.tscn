@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dl5ambl24bu1m"]
+[gd_scene load_steps=11 format=3 uid="uid://dl5ambl24bu1m"]
 
 [ext_resource type="PackedScene" uid="uid://d0a7msm5avogo" path="res://scenes/entities/player.tscn" id="1_l4wp4"]
 [ext_resource type="PackedScene" uid="uid://cfbd6na46865c" path="res://scenes/entities/ball.tscn" id="2_mv8gb"]
 [ext_resource type="PackedScene" uid="uid://woue3p5i67pa" path="res://scenes/ui/pause_menu.tscn" id="3_up38g"]
 [ext_resource type="Script" path="res://scripts/brick_wall.gd" id="4_b38dx"]
 [ext_resource type="PackedScene" uid="uid://c2kfluuc6ne31" path="res://scenes/entities/brick.tscn" id="5_nmfcb"]
+[ext_resource type="Script" path="res://scripts/ui/score.gd" id="6_bhtad"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2bocg"]
 
@@ -77,3 +78,10 @@ position = Vector2(576, 224)
 rotation = -3.14159
 script = ExtResource("4_b38dx")
 brick_scene = ExtResource("5_nmfcb")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 104.0
+offset_bottom = 29.0
+script = ExtResource("6_bhtad")

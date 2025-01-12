@@ -9,6 +9,7 @@ var current_stage: int = 0  # Track current hit stage
 signal brick_destroyed
 
 func _ready():
+	connect("brick_destroyed", GameController._on_brick_destroyed)
 	initial_frame = (row / 2) * 3
 	$Sprite2D.frame = initial_frame
 
