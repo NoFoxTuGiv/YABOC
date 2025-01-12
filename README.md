@@ -1,4 +1,4 @@
-# BREAKOUT! (The Clone)
+# YABOC! (Yet Another Breakout Clone)
 
 Another simple GoDot project to help me learn the basics. This time a clone of the classic: "Breakout!" This is part of the [20 games challenge](https://20_games_challenge.gitlab.io/).
 

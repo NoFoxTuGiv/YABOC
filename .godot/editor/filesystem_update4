@@ -7,3 +7,11 @@ res://scenes/entities/ball.tscn
 res://scenes/ui/main_settings.tscn
 res://scenes/entities/brick.tscn
 res://scripts/brick.gd
+res://scripts/brick_wall.gd
+res://scripts/util/game_controller.gd
+res://scripts/ui/game_over.gd
+res://scripts/util/global.gd
+res://scripts/ui/main_menu.gd
+res://scripts/ui/main_settings.gd
+res://scripts/ui/pause_menu.gd
+res://README.md
