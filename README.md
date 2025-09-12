@@ -23,3 +23,11 @@ Track 3: Retro Games Music The Road
 Track 4: Dark Synthwave by Singularity
 
 Track 5: Retro Space Synthwave by MokkaMusic / Apollo
+
+### TODOs
+
+- Update title art asset
+- Upgrade menus and settings to be persistent
+- Overhaul/refactor the entire code base
+- Bring in my own custom assets
+- Shaders
